@@ -1,0 +1,210 @@
+{
+    "swagger": "2.0",
+    "info": {
+        "title": "Laravel Generator APIs",
+        "version": "1.0.0"
+    },
+    "basePath": "/api/v1",
+    "paths": {},
+    "definitions": {
+        "Qrcode": {
+            "required": [
+                "user_id",
+                "company_name",
+                "product_name",
+                "callback_url",
+                "amount",
+                "status"
+            ],
+            "properties": {
+                "id": {
+                    "description": "id",
+                    "type": "integer",
+                    "format": "int32"
+                },
+                "user_id": {
+                    "description": "user_id",
+                    "type": "integer",
+                    "format": "int32"
+                },
+                "website": {
+                    "description": "website",
+                    "type": "string"
+                },
+                "company_name": {
+                    "description": "company_name",
+                    "type": "string"
+                },
+                "product_name": {
+                    "description": "product_name",
+                    "type": "string"
+                },
+                "product_url": {
+                    "description": "product_url",
+                    "type": "string"
+                },
+                "callback_url": {
+                    "description": "callback_url",
+                    "type": "string"
+                },
+                "qrcode_path": {
+                    "description": "qrcode_path",
+                    "type": "string"
+                },
+                "amount": {
+                    "description": "amount",
+                    "type": "number",
+                    "format": "number"
+                },
+                "status": {
+                    "description": "status",
+                    "type": "boolean"
+                },
+                "created_at": {
+                    "description": "created_at",
+                    "type": "string",
+                    "format": "date-time"
+                },
+                "updated_at": {
+                    "description": "updated_at",
+                    "type": "string",
+                    "format": "date-time"
+                }
+            }
+        },
+        "Role": {
+            "required": [
+                "name"
+            ],
+            "properties": {
+                "id": {
+                    "description": "id",
+                    "type": "integer",
+                    "format": "int32"
+                },
+                "name": {
+                    "description": "name",
+                    "type": "string"
+                },
+                "created_at": {
+                    "description": "created_at",
+                    "type": "string",
+                    "format": "date-time"
+                },
+                "updated_at": {
+                    "description": "updated_at",
+                    "type": "string",
+                    "format": "date-time"
+                }
+            }
+        },
+        "Transaction": {
+            "required": [
+                "user_id",
+                "qrcode_id",
+                "amount",
+                "status"
+            ],
+            "properties": {
+                "id": {
+                    "description": "id",
+                    "type": "integer",
+                    "format": "int32"
+                },
+                "user_id": {
+                    "description": "user_id",
+                    "type": "integer",
+                    "format": "int32"
+                },
+                "qrcode_owner_id": {
+                    "description": "qrcode_owner_id",
+                    "type": "integer",
+                    "format": "int32"
+                },
+                "qrcode_id": {
+                    "description": "qrcode_id",
+                    "type": "integer",
+                    "format": "int32"
+                },
+                "payment_method": {
+                    "description": "payment_method",
+                    "type": "string"
+                },
+                "message": {
+                    "description": "message",
+                    "type": "string"
+                },
+                "amount": {
+                    "description": "amount",
+                    "type": "number",
+                    "format": "number"
+                },
+                "status": {
+                    "description": "status",
+                    "type": "string"
+                },
+                "created_at": {
+                    "description": "created_at",
+                    "type": "string",
+                    "format": "date-time"
+                },
+                "updated_at": {
+                    "description": "updated_at",
+                    "type": "string",
+                    "format": "date-time"
+                }
+            }
+        },
+        "User": {
+            "required": [
+                "name",
+                "role_id",
+                "email",
+                "password"
+            ],
+            "properties": {
+                "id": {
+                    "description": "id",
+                    "type": "integer",
+                    "format": "int32"
+                },
+                "name": {
+                    "description": "name",
+                    "type": "string"
+                },
+                "role_id": {
+                    "description": "role_id",
+                    "type": "integer",
+                    "format": "int32"
+                },
+                "email": {
+                    "description": "email",
+                    "type": "string"
+                },
+                "email_verified_at": {
+                    "description": "email_verified_at",
+                    "type": "string",
+                    "format": "date-time"
+                },
+                "password": {
+                    "description": "password",
+                    "type": "string"
+                },
+                "remember_token": {
+                    "description": "remember_token",
+                    "type": "string"
+                },
+                "created_at": {
+                    "description": "created_at",
+                    "type": "string",
+                    "format": "date-time"
+                },
+                "updated_at": {
+                    "description": "updated_at",
+                    "type": "string",
+                    "format": "date-time"
+                }
+            }
+        }
+    }
+}
